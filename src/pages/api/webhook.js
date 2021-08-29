@@ -3,7 +3,7 @@ import * as admin from 'firebase-admin';
 
 // secure a connection to firebase from backend
 const serviceAccount = require('../../../permissions');
-console.log(serviceAccount);
+// console.log(serviceAccount);
 
 const app = !admin.apps.length
 	? admin.initializeApp({
@@ -17,7 +17,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
 
 const fulfillOrder = async (session) => {
-	console.log(' Session : ', session);
+	// console.log(' Session : ', session);
 	return app
 		.firestore()
 		.collection('users')
