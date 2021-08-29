@@ -4,6 +4,21 @@ const initialState = {
 	items: [],
 };
 
+/**
+ * restructure the basket item into 
+ * {
+ * 		id,
+			title,
+			price,
+			description,
+			category,
+			image,
+			rating,
+			hasPrime,
+			quantity
+ * } 
+ */
+
 export const basketSlice = createSlice({
 	name: 'basket',
 	initialState,
